@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import dpkt
+# import dpkt
 import socket
 
 UDP_IP = ""
