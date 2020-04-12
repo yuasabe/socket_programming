@@ -5,7 +5,7 @@ import socket
 import sys
 
 # UDP_IP = "203.178.135.26"
-UDP_IP = "127.0.0.1"
+UDP_IPs = ["127.0.0.1", "192.168.0.116", "yuasabe.hongo.wide.ad.jp"]
 # UDP_IP = "<broadcast>"
 UDP_PORT = 1024
 
@@ -31,14 +31,15 @@ while True:
 	if message == '/exit':
 		print('Exiting.')
 		sys.exit()
-	DATA = bytes(message, "utf-8")
+	DATA = bytes(message + '\n', "utf-8")
 	if len(DATA) > 255:
 		print("Too long. Try again.")
 		continue
 	LEN = bytes([len(DATA)])
 	byte_message = LEN + DATA
 
-	sock.sendto(byte_message, (UDP_IP, UDP_PORT))
+	for UDP_IP in UDP_IPs:
+		sock.sendto(byte_message, (UDP_IP, UDP_PORT))
 
 	# data, addr = sock.recvfrom(1024)
 
