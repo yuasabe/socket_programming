@@ -31,7 +31,7 @@ while True:
 	if message == '/exit':
 		print('Exiting.')
 		sys.exit()
-	DATA = bytes(message + '\n', "utf-8")
+	DATA = bytes("asabe: " + message + '\n', "utf-8")
 	if len(DATA) > 255:
 		print("Too long. Try again.")
 		continue
