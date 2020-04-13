@@ -9,7 +9,19 @@ UDP_IPs = [
 	"127.0.0.1",
 	"192.168.0.116",
 	"yuasabe.hongo.wide.ad.jp",
-	"cai.hongo.wide.ad.jp"
+	"cai.hongo.wide.ad.jp",
+	"fiord.hongo.wide.ad.jp",
+	"shun.hongo.wide.ad.jp",
+	"ishizaki.hongo.wide.ad.jp",
+	"kanaya.hongo.wide.ad.jp",
+	"shim.hongo.wide.ad.jp",
+	"repster.hongo.wide.ad.jp",
+	"kiuchi.hongo.wide.ad.jp",
+	"kou.hongo.wide.ad.jp",
+	"toshi.hongo.wide.ad.jp",
+	"ben.hongo.wide.ad.jp",
+	"kawamura.hongo.wide.ad.jp",
+	"aotani.hongo.wide.ad.jp"
 ]
 # UDP_IP = "<broadcast>"
 UDP_PORT = 1024
