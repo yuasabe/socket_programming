@@ -5,7 +5,12 @@ import socket
 import sys
 
 # UDP_IP = "203.178.135.26"
-UDP_IPs = ["127.0.0.1", "192.168.0.116", "yuasabe.hongo.wide.ad.jp"]
+UDP_IPs = [
+	"127.0.0.1",
+	"192.168.0.116",
+	"yuasabe.hongo.wide.ad.jp",
+	"cai.hongo.wide.ad.jp"
+]
 # UDP_IP = "<broadcast>"
 UDP_PORT = 1024
 
@@ -31,7 +36,8 @@ while True:
 	if message == '/exit':
 		print('Exiting.')
 		sys.exit()
-	DATA = bytes("asabe: " + message + '\n', "utf-8")
+	# DATA = bytes("asabe: " + message, "utf-8")
+	DATA = str("asabe: " + message).encode("utf-8")
 	if len(DATA) > 255:
 		print("Too long. Try again.")
 		continue

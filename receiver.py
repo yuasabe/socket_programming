@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-# import dpkt
 import socket
 
 UDP_IP = ""
@@ -14,6 +13,6 @@ print("Listening...")
 while True:
 	data, addr = sock.recvfrom(1024)
 	print("received message from ", addr)
-	print("data: ", data[1:].decode())
+	print("data: ", data[1:].decode("utf-8"))
 	print("len: ", int.from_bytes(data[:1], byteorder='big', signed=False))
 
